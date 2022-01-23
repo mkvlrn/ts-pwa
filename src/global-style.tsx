@@ -1,8 +1,9 @@
 import { css, Global } from '@emotion/react'
-// import emotionReset from 'emotion-reset'
+import emotionNormalize from 'emotion-normalize'
 
 const globalStyle = css`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+  ${emotionNormalize}
 
   * {
     box-sizing: border-box;
