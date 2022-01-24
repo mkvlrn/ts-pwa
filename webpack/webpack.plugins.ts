@@ -6,6 +6,7 @@ import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import TsconfigPathsWebpackPlugin from 'tsconfig-paths-webpack-plugin'
 import WorkboxWebpackPlugin from 'workbox-webpack-plugin'
 
 import manifest from '../src/assets/manifest.json'
@@ -13,6 +14,9 @@ import manifest from '../src/assets/manifest.json'
 const isDev = process.env.NODE_ENV === 'development'
 
 export const plugins: Configuration = {
+  resolve: {
+    plugins: [new TsconfigPathsWebpackPlugin({ extensions: ['.ts', '.tsx', '.json'] })],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: resolve(__dirname, '..', 'src', 'index.html'),

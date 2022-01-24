@@ -6,5 +6,10 @@
   },
   "extends": [
     "@mkvlrn/eslint-config/typescript-react"
-  ]
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
 }

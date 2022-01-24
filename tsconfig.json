@@ -3,6 +3,18 @@
     "module": "CommonJS",
     "target": "ESNext",
     "rootDir": ".",
+    "baseUrl": "./src",
+    "paths": {
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ]
+    },
     "lib": [
       "DOM",
       "ESNext"
