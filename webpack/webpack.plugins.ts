@@ -9,7 +9,7 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import TsconfigPathsWebpackPlugin from 'tsconfig-paths-webpack-plugin'
 import WorkboxWebpackPlugin from 'workbox-webpack-plugin'
 
-import manifest from '../src/manifest.json'
+import manifest from '../src/assets/manifest.json'
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -34,12 +34,12 @@ export const plugins: Configuration = {
       },
     ]) as WebpackPluginInstance, // workaround for error with this plugin, missing properties
     new FaviconsWebpackPlugin({
-      logo: resolve(__dirname, '..', 'src', 'logo.png'),
+      logo: resolve(__dirname, '..', 'src', 'assets', 'logo.png'),
       cache: true,
       publicPath: './',
       prefix: 'webapp/',
       inject: true,
-      manifest: resolve(__dirname, '..', 'src', 'manifest.json'),
+      manifest: resolve(__dirname, '..', 'src', 'assets', 'manifest.json'),
       favicons: {
         icons: {
           appleStartup: false,

@@ -22,6 +22,12 @@
       ],
       "@hooks/*": [
         "hooks/*"
+      ],
+      "@state": [
+        "state"
+      ],
+      "@state/*": [
+        "state/*"
       ]
     },
     "lib": [
