@@ -1,4 +1,4 @@
-name: GH Pages
+name: netlify
 
 on:
   push:
@@ -68,7 +68,7 @@ jobs:
           path: build/
 
       - name: deploy to netlify
-        run: npx netlify-cli --dir build --message ${{ github.event.commits[0].message }} --prod --site {{ NETLIFY_APP }} --auth {{ NETLIFY_TOKEN }}
+        run: npx netlify-cli deploy --dir build --message ${{ github.event.commits[0].message }} --prod --site {{ NETLIFY_APP }} --auth {{ NETLIFY_TOKEN }}
         env:
           NETLIFY_APP: ${{ secrets.NETLIFY_APP }}
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
