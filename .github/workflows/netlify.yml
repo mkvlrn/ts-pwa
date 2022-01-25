@@ -68,9 +68,10 @@ jobs:
           path: build/
 
       - name: deploy to netlify
-        run: npx netlify deploy \
-          --prod \
-          --dir=build \
-          --message="${{ github.event.commits[0].message }}" \
-          --site=${{ secrets.NETLIFY_APP }} \
+        run: >
+          npx netlify deploy
+          --prod
+          --dir=build
+          --message="${{ github.event.commits[0].message }}"
+          --site=${{ secrets.NETLIFY_APP }}
           --auth=${{ secrets.NETLIFY_TOKEN }}
