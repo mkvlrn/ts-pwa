@@ -72,8 +72,5 @@ jobs:
           --prod \
           --dir="build" \
           --message="${{ github.event.commits[0].message }}" \
-          --site="${{ NETLIFY_APP }}" \
-          --auth="${{ NETLIFY_TOKEN }}"
-        env:
-          NETLIFY_APP: ${{ secrets.NETLIFY_APP }}
-          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          --site="${{ secrets.NETLIFY_APP }}" \
+          --auth="${{ secrets.NETLIFY_TOKEN }}"
