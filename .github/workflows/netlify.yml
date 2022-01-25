@@ -70,7 +70,7 @@ jobs:
       - name: deploy to netlify
         run: npx netlify deploy \
           --prod \
-          --dir="build" \
+          --dir=build \
           --message="${{ github.event.commits[0].message }}" \
-          --site="${{ secrets.NETLIFY_APP }}" \
-          --auth="${{ secrets.NETLIFY_TOKEN }}"
+          --site=${{ secrets.NETLIFY_APP }} \
+          --auth=${{ secrets.NETLIFY_TOKEN }}
