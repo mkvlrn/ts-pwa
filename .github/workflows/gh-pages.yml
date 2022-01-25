@@ -57,20 +57,10 @@ jobs:
           name: build
           path: build/
 
-  gh-pages:
+  deploy-to-netlify:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
-          cache: 'yarn'
-          registry-url: https://registry.npmjs.org
-
       - name: download build artifact
         uses: actions/download-artifact@v2
         with:
@@ -78,7 +68,7 @@ jobs:
           path: build/
 
       - name: deploy to netlify
-        run: npx netlify-cli --dir=build --message=${{ github.event.commits[0].message }} --prod --site={{ NETLIFY_APP }} --auth={{ NETLIFY_TOKEN }}
+        run: npx netlify-cli --dir build --message ${{ github.event.commits[0].message }} --prod --site {{ NETLIFY_APP }} --auth {{ NETLIFY_TOKEN }}
         env:
           NETLIFY_APP: ${{ secrets.NETLIFY_APP }}
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
