@@ -77,9 +77,8 @@ jobs:
           name: build
           path: build/
 
-      - name: publish package
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/mkvlrn/template-typescript-pwa
-          npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+      - name: deploy to netlify
+        run: npx netlify-cli --dir=build --message=${{ github.event.commits[0].message }} --prod --site={{ NETLIFY_APP }} --auth={{ NETLIFY_TOKEN }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NETLIFY_APP: ${{ secrets.NETLIFY_APP }}
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
