@@ -79,7 +79,7 @@ jobs:
 
       - name: publish package
         run: |
-          git remote set-url demo https://git:${GITHUB_TOKEN}@github.com/mkvlrn/template-typescript-pwa
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/mkvlrn/template-typescript-pwa
           npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
