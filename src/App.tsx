@@ -1,7 +1,5 @@
+import * as S from './App.style'
+
 export function App() {
-  return (
-    <div>
-      <h2>React!</h2>
-    </div>
-  )
+  return <S.App>react</S.App>
 }

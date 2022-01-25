@@ -1,7 +1,7 @@
 {
   "name": "Typescript PWA",
   "short_name": "TS-PWA",
-  "description": "A fully configurable Typescript PWA",
+  "description": "React PWA typescript template",
   "start_url": "/",
   "lang": "en",
   "display": "standalone",
@@ -12,7 +12,7 @@
       "src": "android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ]
 }

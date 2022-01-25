@@ -1,21 +1,24 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "ESNext",
+    "target": "ES6",
     "rootDir": ".",
     "baseUrl": "./src",
     "paths": {
-      "@assets/*": [
-        "assets/*"
+      "@components": [
+        "components"
       ],
       "@components/*": [
         "components/*"
       ],
-      "@styles/*": [
-        "styles/*"
+      "@utils": [
+        "utils"
       ],
       "@utils/*": [
         "utils/*"
+      ],
+      "@hooks": [
+        "hooks"
       ],
       "@hooks/*": [
         "hooks/*"
@@ -44,6 +47,7 @@
     "src/**/*.tsx",
     "tests/**/*.ts",
     "tests/**/*.tsx",
+    "tailwind.config.ts",
     "webpack/**/*.ts",
     "webpack.config.ts",
     "custom.d.ts"

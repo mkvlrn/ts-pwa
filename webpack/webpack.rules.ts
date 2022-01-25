@@ -16,8 +16,9 @@ export const rules: Configuration = {
           'style-loader',
           {
             loader: 'css-loader',
-            options: { modules: true },
+            options: { modules: undefined },
           },
+          'postcss-loader',
         ],
       },
       {

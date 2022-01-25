@@ -1,7 +1,8 @@
 import { StrictMode } from 'react'
 import { render } from 'react-dom'
 import { App } from './App'
-import { GlobalStyle } from './global-style'
+import { GlobalStyle } from './global.style'
+import './tailwind.css'
 
 render(
   <StrictMode>
