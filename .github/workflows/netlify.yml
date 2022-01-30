@@ -58,6 +58,8 @@ jobs:
           path: build/
 
   deploy-to-netlify:
+    environment:
+      name: prod
     needs: [build]
     runs-on: ubuntu-latest
     steps:
