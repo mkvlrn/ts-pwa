@@ -1,4 +1,4 @@
-# template-typescript-react
+# ts-pwa
 
 an opinionated typescript react PWA template with batteries included
 
