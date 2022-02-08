@@ -52,7 +52,7 @@
     "@types/webpack-dev-server": "^4.7.2",
     "@types/workbox-webpack-plugin": "^5.1.8",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
-    "@typescript-eslint/parser": "^5.10.2",
+    "@typescript-eslint/parser": "^5.11.0",
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "babel-plugin-twin": "^1.0.2",
