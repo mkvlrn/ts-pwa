@@ -46,7 +46,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
     "@types/html-replace-webpack-plugin": "^2.6.1",
     "@types/jest": "^27.4.0",
-    "@types/node": "^17.0.14",
+    "@types/node": "^17.0.16",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "@types/webpack-dev-server": "^4.7.2",
