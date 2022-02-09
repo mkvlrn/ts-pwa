@@ -1,4 +1,4 @@
-name: netlify
+name: ci
 
 on:
   push:
