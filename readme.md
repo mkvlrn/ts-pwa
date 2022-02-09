@@ -1,6 +1,8 @@
 # ts-pwa
 
-an opinionated typescript react PWA template with batteries included
+a very opinionated typescript react PWA template with batteries included
+
+for when CRA is not your thing
 
 ## what's in it?
 
