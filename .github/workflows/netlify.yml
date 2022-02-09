@@ -58,8 +58,7 @@ jobs:
           path: build/
 
   deploy-to-netlify:
-    environment:
-      name: prod
+    if: "!contains(github.event.head_commit.message, 'no-deploy')"
     needs: [build]
     runs-on: ubuntu-latest
     steps:
