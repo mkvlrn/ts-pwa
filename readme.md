@@ -1,6 +1,6 @@
-[![ci](https://github.com/mkvlrn/ts-pwa/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mkvlrn/ts-pwa/actions/workflows/ci.yml)
-
 # ts-pwa
+
+[![ci](https://github.com/mkvlrn/ts-pwa/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/mkvlrn/ts-pwa/actions/workflows/ci.yml)
 
 a very opinionated typescript react PWA template with batteries included
 
