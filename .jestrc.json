@@ -10,7 +10,7 @@
     "^.+\\.ts$": "ts-jest"
   },
   "collectCoverageFrom": [
-    "src/*.(ts|js)",
+    "src/**/*.(ts|js)",
     "!**/index.(ts|js)"
   ],
   "coveragePathIgnorePatterns": [
