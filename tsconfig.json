@@ -53,7 +53,6 @@
     "src/**/*.tsx",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "tailwind.config.ts",
     "webpack/**/*.ts",
     "webpack.config.ts",
     "custom.d.ts"
