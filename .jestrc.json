@@ -1,21 +1,24 @@
 {
   "moduleFileExtensions": [
     "js",
+    "jsx",
+    "json",
     "ts",
+    "tsx",
     "json"
   ],
   "rootDir": ".",
-  "testRegex": ".*\\.(test|spec)\\.(ts|js)$",
+  "testRegex": ".*\\.(test|spec)\\.(ts|js|tsx|jsx)$",
   "transform": {
-    "^.+\\.ts$": "ts-jest"
+    "^.+\\.tsx?$": "ts-jest"
   },
   "collectCoverageFrom": [
-    "src/**/*.(ts|js)",
-    "!**/index.(ts|js)"
+    "src/**/*.(ts|tsx)",
+    "!src/index.tsx"
   ],
   "coveragePathIgnorePatterns": [
     "node_modules"
   ],
   "coverageDirectory": "./coverage",
-  "testEnvironment": "node"
+  "testEnvironment": "jsdom"
 }

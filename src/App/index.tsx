@@ -5,7 +5,7 @@ export function App() {
   return (
     <S.App>
       <GlobalStyle />
-      react
+      <p>react</p>
     </S.App>
   )
 }
