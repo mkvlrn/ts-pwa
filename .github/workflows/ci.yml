@@ -15,8 +15,7 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          paths:
-            - ~/.npm
+          path: ~/.npm
           key: cache
         env:
           cache-name: npm-cache
@@ -49,8 +48,7 @@ jobs:
       - name: cache
         uses: actions/cache@v2
         with:
-          paths:
-            - ~/.npm
+          path: ~/.npm
           key: cache
         env:
           cache-name: npm-cache
