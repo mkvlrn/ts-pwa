@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
-export const App = styled.div`
+export const Paragraph = styled.p`
   font-weight: bold;
 `

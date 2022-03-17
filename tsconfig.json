@@ -55,7 +55,8 @@
     "tests/**/*.tsx",
     "webpack/**/*.ts",
     "webpack.config.ts",
-    "custom.d.ts"
+    "custom.d.ts",
+    "jest.config.ts"
   ],
   "exclude": [
     "node_modules"

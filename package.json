@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve",
     "build": "cross-env NODE_ENV=production webpack",
-    "test": "jest --passWithNoTests --coverage --config .jestrc.json",
+    "test": "jest --passWithNoTests --coverage",
     "prepare": "npx simple-git-hooks"
   },
   "dependencies": {
