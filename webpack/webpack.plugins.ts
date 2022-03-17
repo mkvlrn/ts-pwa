@@ -2,7 +2,7 @@
 
 import { Configuration, WebpackPluginInstance } from 'webpack'
 import { resolve } from 'path'
-import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
@@ -23,6 +23,19 @@ export const plugins: Configuration = {
       filename: 'index.html',
       minify: !isDev,
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: resolve(__dirname, '..', 'src', 'assets'),
+          to: 'assets',
+          filter: (file) => !file.endsWith('.json'),
+        },
+        {
+          from: resolve(__dirname, '..', 'src', 'assets', 'manifest.json'),
+          to: 'assets/site.webmanifest',
+        },
+      ],
+    }),
     new HtmlReplaceWebpackPlugin([
       {
         pattern: '__TITLE__',
@@ -33,23 +46,6 @@ export const plugins: Configuration = {
         replacement: manifest.description,
       },
     ]) as WebpackPluginInstance, // workaround for error with this plugin, missing properties
-    new FaviconsWebpackPlugin({
-      logo: resolve(__dirname, '..', 'src', 'assets', 'logo.png'),
-      cache: true,
-      publicPath: './',
-      prefix: 'webapp/',
-      inject: true,
-      manifest: resolve(__dirname, '..', 'src', 'assets', 'manifest.json'),
-      favicons: {
-        icons: {
-          appleStartup: false,
-          coast: false,
-          firefox: false,
-          windows: false,
-          yandex: false,
-        },
-      },
-    }),
     ...(isDev ? [new ReactRefreshWebpackPlugin()] : []),
     ...(isDev
       ? []

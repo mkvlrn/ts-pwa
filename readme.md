@@ -21,5 +21,5 @@ for when CRA is not your thing
 
 1. clone
 2. do your thing
-3. `yarn dev` to start webpack dev server
-4. `yarn build` to compile
+3. `npm run dev` to start webpack dev server
+4. `npm run build` to compile
