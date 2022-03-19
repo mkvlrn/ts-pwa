@@ -1,15 +1,18 @@
 import { RecoilRoot } from 'recoil'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { CssBaseline } from '@mui/material'
 
-import { Counter } from '@components/Counter'
-import { HelloWorld } from '@components/HelloWorld'
-import { GlobalStyle } from './style'
+import { Counter } from '@pages/Counter'
+import { HelloWorld } from '@pages/HelloWorld'
+import { Quotes } from '@pages/Quotes'
+import { Navbar } from './Navbar'
 
 export function App() {
   return (
     <RecoilRoot>
-      <GlobalStyle />
+      <CssBaseline />
       <Router>
+        <Navbar />
         <Routes>
           <Route
             path='/'
@@ -18,6 +21,10 @@ export function App() {
           <Route
             path='/counter'
             element={<Counter />}
+          />
+          <Route
+            path='quotes'
+            element={<Quotes />}
           />
         </Routes>
       </Router>

@@ -1,0 +1,17 @@
+[
+  {
+    "key": "kanye",
+    "title": "Kanye West",
+    "quotes": "https://api.kanye.rest"
+  },
+  {
+    "key": "thanos",
+    "title": "Thanos",
+    "quotes": "https://thanosapi.herokuapp.com/random/"
+  },
+  {
+    "key": "lemon",
+    "title": "Liz Lemon",
+    "quotes": "https://t9jtq0ex94.execute-api.sa-east-1.amazonaws.com/dev/"
+  }
+]

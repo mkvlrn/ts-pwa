@@ -1,3 +1,3 @@
 export function HelloWorld() {
-  return <h1>react pwa</h1>
+  return <div>react pwa</div>
 }

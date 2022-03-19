@@ -21,7 +21,7 @@ export const rules: Configuration = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|webp)$/,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name].[ext]',
