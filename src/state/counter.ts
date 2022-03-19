@@ -1,8 +1,8 @@
 import { atom } from 'recoil'
 
-const counter = atom({
+const counterState = atom({
   key: 'counter',
   default: 0,
 })
 
-export { counter }
+export { counterState }

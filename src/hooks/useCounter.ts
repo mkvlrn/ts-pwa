@@ -1,12 +1,12 @@
 import { useRecoilState } from 'recoil'
 
-import { counter } from '@state/counter'
+import { counterState } from '@state/counter'
 
 export function useCounter() {
-  const [count, setCount] = useRecoilState(counter)
+  const [counter, setCounter] = useRecoilState(counterState)
   return {
-    count,
-    increment: () => setCount(count + 1),
-    decrement: () => setCount(count - 1),
+    counter,
+    increment: () => setCounter(counter + 1),
+    decrement: () => setCounter(counter - 1),
   }
 }
