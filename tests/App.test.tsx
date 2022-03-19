@@ -3,11 +3,11 @@ import '@testing-library/jest-dom'
 
 import { App } from '@components/App'
 
-describe('placeholder', () => {
+describe('App component', () => {
   test('document loads', () => {
     render(<App />)
 
-    const text = screen.getByText('react')
+    const text = screen.getByText('react pwa')
     expect(text).toBeInTheDocument()
   })
 })

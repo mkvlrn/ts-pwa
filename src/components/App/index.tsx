@@ -1,11 +1,13 @@
-import { Paragraph } from '@components/Paragraph'
-import { GlobalStyle } from './global.style'
+import { Counter } from '@components/Counter'
+import { RecoilRoot } from 'recoil'
+import { GlobalStyle } from './style'
 
 export function App() {
   return (
-    <>
+    <RecoilRoot>
       <GlobalStyle />
-      <Paragraph />
-    </>
+      <p>react pwa</p>
+      <Counter />
+    </RecoilRoot>
   )
 }

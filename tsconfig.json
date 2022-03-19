@@ -23,11 +23,11 @@
       "@hooks/*": [
         "hooks/*"
       ],
-      "@store": [
-        "store"
+      "@state": [
+        "state"
       ],
-      "@store/*": [
-        "store/*"
+      "@state/*": [
+        "state/*"
       ]
     },
     "lib": [
