@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
-import { HelloWorld } from '.'
+import { Home } from '.'
 
-describe('Hello World', () => {
+describe('Home', () => {
   test('should render', () => {
-    render(<HelloWorld />)
+    render(<Home />)
 
     const text = screen.getByText('react pwa')
     expect(text).toBeInTheDocument()
