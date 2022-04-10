@@ -9,7 +9,9 @@
   ],
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "typescript": {
+        "paths": "./tsconfig.json"
+      }
     }
   }
 }
