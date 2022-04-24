@@ -1,4 +1,4 @@
-import { useCounter } from '@hooks/useCounter'
+import { useCounter } from '@state/counter'
 
 export function Counter() {
   const { counter, increment, decrement } = useCounter()

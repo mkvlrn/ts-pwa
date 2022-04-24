@@ -1,21 +1,16 @@
-import { RecoilRoot } from 'recoil'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import CssBaseline from '@mui/material/CssBaseline'
-import Container from '@mui/material/Container'
+import { RecoilRoot } from 'recoil'
+import { Shell } from '@components/Shell'
 
 import { Counter } from '@pages/Counter'
 import { Home } from '@pages/Home'
 import { Quotes } from '@pages/Quotes'
-import { Navbar } from './Navbar'
 
 export function App() {
   return (
     <RecoilRoot>
-      <CssBaseline />
-
-      <Router>
-        <Navbar />
-        <Container>
+      <Shell>
+        <Router>
           <Routes>
             <Route
               path='/'
@@ -30,8 +25,8 @@ export function App() {
               element={<Quotes />}
             />
           </Routes>
-        </Container>
-      </Router>
+        </Router>
+      </Shell>
     </RecoilRoot>
   )
 }

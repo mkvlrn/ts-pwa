@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
-import { App } from '@components/App'
+import { App } from '.'
 
 describe('App component', () => {
   test('document loads', () => {
