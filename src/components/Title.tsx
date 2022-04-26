@@ -6,7 +6,7 @@ export function Title() {
       order={1}
       style={{ fontFamily: 'Signika, sans-serif' }}
     >
-      React Typescript PWA Template
+      React PWA Typescript Template
     </MTitle>
   )
 }
