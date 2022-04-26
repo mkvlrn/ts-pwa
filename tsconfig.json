@@ -5,6 +5,12 @@
     "rootDir": ".",
     "baseUrl": "./src",
     "paths": {
+      "@assets": [
+        "assets"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
       "@components": [
         "components"
       ],
@@ -61,7 +67,6 @@
     "tests/**/*.tsx",
     "webpack/**/*.ts",
     "webpack.config.ts",
-    "custom.d.ts",
     "jest.config.ts"
   ],
   "exclude": [

@@ -1,32 +1,28 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { RecoilRoot } from 'recoil'
-import { Shell } from '@components/Shell'
-
-import { Counter } from '@pages/Counter'
+import { MantineProvider, ColorSchemeProvider, ColorScheme, Global } from '@mantine/core'
 import { Home } from '@pages/Home'
-import { Quotes } from '@pages/Quotes'
+import { useState } from 'react'
 
 export function App() {
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
   return (
-    <RecoilRoot>
-      <Shell>
-        <Router>
-          <Routes>
-            <Route
-              path='/'
-              element={<Home />}
-            />
-            <Route
-              path='/counter'
-              element={<Counter />}
-            />
-            <Route
-              path='quotes'
-              element={<Quotes />}
-            />
-          </Routes>
-        </Router>
-      </Shell>
-    </RecoilRoot>
+    <ColorSchemeProvider
+      colorScheme={colorScheme}
+      toggleColorScheme={toggleColorScheme}
+    >
+      <MantineProvider
+        withNormalizeCSS
+        withGlobalStyles
+        theme={{ colorScheme, fontFamily: 'Signika, sans-serif' }}
+      >
+        <Global
+          styles={(theme) => ({
+            body: { ...theme.fn.fontStyles(), textAlign: 'center' },
+          })}
+        />
+        <Home />
+      </MantineProvider>
+    </ColorSchemeProvider>
   )
 }
