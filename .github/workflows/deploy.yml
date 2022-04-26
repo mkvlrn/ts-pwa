@@ -1,45 +1,10 @@
-name: ci
+name: deploy
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: cache
-        env:
-          cache-name: npm-cache
-
-      - name: setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org
-
-      - name: install packages
-        run: npm ci
-
-      - name: run tests
-        run: npm test
-
-      - name: upload coverage folder as artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: coverage
-          path: coverage/
-
   build:
-    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -72,7 +37,6 @@ jobs:
           path: build/
 
   deploy-to-netlify:
-    if: "contains(github.event.head_commit.message, '[deploy]')"
     needs: [build]
     runs-on: ubuntu-latest
     steps:
