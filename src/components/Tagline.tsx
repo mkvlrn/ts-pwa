@@ -1,13 +1,9 @@
-import { Title } from '@mantine/core'
+import { Text } from '@mantine/core'
 
 export function Tagline() {
   return (
-    <Title
-      order={4}
-      mb={15}
-    >
-      Title very opinionated, code-quality-first approach to a React Progressive Web Application
-      template
-    </Title>
+    <Text mb={15}>
+      Very opinionated, code-quality-first approach to a React Progressive Web Application template
+    </Text>
   )
 }

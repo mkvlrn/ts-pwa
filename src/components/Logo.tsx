@@ -23,6 +23,7 @@ export function Logo() {
       className={classes.logo}
       fit='contain'
       height='30vmin'
+      alt='React'
     />
   )
 }
