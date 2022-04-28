@@ -13,5 +13,7 @@ export default {
   coveragePathIgnorePatterns: ['node_modules'],
   coverageDirectory: './coverage',
   testEnvironment: 'jsdom',
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/src/' }),
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/src/',
+  }),
 }

@@ -9,8 +9,8 @@ for when CRA is not your thing
 ## what's in it?
 
 - awesome eslint config (based on airbnb's guide)
-- basic prettier config
-- working default-y jest config
+- straighforward prettier config
+- working, default-y jest config
 - git hook to lint commit message using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)
 - git hook to lint, prettify, and run test on staged files pre commit
 - typescript paths
