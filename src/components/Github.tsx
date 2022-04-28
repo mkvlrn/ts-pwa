@@ -1,5 +1,5 @@
 import { Button, useMantineColorScheme } from '@mantine/core'
-import { BrandGithub, ExternalLink } from 'tabler-icons-react'
+import { IconBrandGithub, IconExternalLink } from '@tabler/icons'
 
 export function Github() {
   const { colorScheme } = useMantineColorScheme()
@@ -7,8 +7,8 @@ export function Github() {
     <Button
       component='a'
       href='https://github.com/mkvlrn/ts-pwa'
-      rightIcon={<BrandGithub />}
-      leftIcon={<ExternalLink />}
+      rightIcon={<IconBrandGithub />}
+      leftIcon={<IconExternalLink />}
       variant={colorScheme === 'dark' ? 'filled' : 'outline'}
       target='_blank'
     >
