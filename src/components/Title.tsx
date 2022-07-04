@@ -1,4 +1,4 @@
-import { Title as MTitle } from '@mantine/core'
+import { Title as MTitle } from '@mantine/core';
 
 export function Title() {
   return (
@@ -8,5 +8,5 @@ export function Title() {
     >
       React PWA Typescript Template
     </MTitle>
-  )
+  );
 }

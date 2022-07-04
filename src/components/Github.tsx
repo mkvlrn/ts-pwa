@@ -1,8 +1,8 @@
-import { Button, useMantineColorScheme } from '@mantine/core'
-import { IconBrandGithub, IconExternalLink } from '@tabler/icons'
+import { Button, useMantineColorScheme } from '@mantine/core';
+import { IconBrandGithub, IconExternalLink } from '@tabler/icons';
 
 export function Github() {
-  const { colorScheme } = useMantineColorScheme()
+  const { colorScheme } = useMantineColorScheme();
   return (
     <Button
       component='a'
@@ -14,5 +14,5 @@ export function Github() {
     >
       View on Github
     </Button>
-  )
+  );
 }

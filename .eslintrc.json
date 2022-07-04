@@ -5,7 +5,7 @@
     "project": "./tsconfig.json"
   },
   "extends": [
-    "@mkvlrn/eslint-config/typescript-react"
+    "@mkvlrn/eslint-config/react"
   ],
   "settings": {
     "import/resolver": {

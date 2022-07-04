@@ -1,9 +1,9 @@
-import { Blockquote, Center, Loader } from '@mantine/core'
-import { useEffect, useState } from 'react'
+import { Blockquote, Center, Loader } from '@mantine/core';
+import { useEffect, useState } from 'react';
 
 interface QuoteResult {
-  author: string
-  text: string
+  author: string;
+  text: string;
 }
 
 const sources = [
@@ -15,21 +15,21 @@ const sources = [
     author: 'Thanos',
     url: 'https://thanosapi.herokuapp.com/random/',
   },
-]
+];
 
 export function Quote() {
-  const [quote, setQuote] = useState<QuoteResult | undefined>(undefined)
+  const [quote, setQuote] = useState<QuoteResult | undefined>(undefined);
 
   useEffect(() => {
     async function getData() {
-      const source = sources[Math.floor(Math.random() * sources.length)]
-      const response = await fetch(source.url)
-      const data = await response.json()
-      setQuote({ author: source.author, text: data.quote })
+      const source = sources[Math.floor(Math.random() * sources.length)];
+      const response = await fetch(source.url);
+      const data = await response.json();
+      setQuote({ author: source.author, text: data.quote });
     }
 
-    getData()
-  }, [])
+    getData();
+  }, []);
 
   return (
     <Center mt={15}>
@@ -41,5 +41,5 @@ export function Quote() {
       )}
       {quote && <Blockquote cite={quote.author}>{quote.text}</Blockquote>}
     </Center>
-  )
+  );
 }

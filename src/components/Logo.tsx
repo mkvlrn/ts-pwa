@@ -1,21 +1,21 @@
-import { Image, keyframes, createStyles } from '@mantine/core'
+import { Image, keyframes, createStyles } from '@mantine/core';
 
-import logo from '@assets/logo.svg'
+import logo from '@assets/logo.svg';
 
 const logoSpin = keyframes({
   from: { transform: 'rotate(0deg)' },
   to: { transform: 'rotate(-360deg)' },
-})
+});
 
 const useStyles = createStyles({
   logo: {
     animation: `${logoSpin} infinite 20s linear`,
     pointerEvents: 'none',
   },
-})
+});
 
 export function Logo() {
-  const { classes } = useStyles()
+  const { classes } = useStyles();
 
   return (
     <Image
@@ -25,5 +25,5 @@ export function Logo() {
       height='30vmin'
       alt='React'
     />
-  )
+  );
 }
