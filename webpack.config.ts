@@ -1,19 +1,19 @@
-import { Configuration, WebpackPluginInstance } from 'webpack'
-import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server'
-import { GenerateSW } from 'workbox-webpack-plugin'
-import { join } from 'path'
-import CopyPlugin from 'copy-webpack-plugin'
-import HtmlPlugin from 'html-webpack-plugin'
-import HtmlReplacePlugin from 'html-replace-webpack-plugin'
-import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin'
-import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin'
+import { Configuration, WebpackPluginInstance } from 'webpack';
+import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
+import { GenerateSW } from 'workbox-webpack-plugin';
+import { join } from 'path';
+import CopyPlugin from 'copy-webpack-plugin';
+import HtmlPlugin from 'html-webpack-plugin';
+import HtmlReplacePlugin from 'html-replace-webpack-plugin';
+import ReactRefreshPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
-import manifest from './src/assets/manifest.json'
+import manifest from './src/assets/manifest.json';
 
-const isDev = process.env.NODE_ENV === 'development'
+const isDev = process.env.NODE_ENV === 'development';
 
 interface WebpackConfiguration extends Configuration {
-  devServer?: WebpackDevServerConfiguration
+  devServer?: WebpackDevServerConfiguration;
 }
 
 const config: WebpackConfiguration = {
@@ -27,7 +27,9 @@ const config: WebpackConfiguration = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    plugins: [new TsconfigPathsPlugin({ extensions: ['.ts', '.tsx', '.json'] })],
+    plugins: [
+      new TsconfigPathsPlugin({ extensions: ['.ts', '.tsx', '.json'] }),
+    ],
   },
   optimization: {
     chunkIds: isDev ? 'named' : 'deterministic',
@@ -36,7 +38,10 @@ const config: WebpackConfiguration = {
     moduleIds: isDev ? 'named' : 'deterministic',
     splitChunks: { chunks: 'all' },
   },
-  devtool: process.env.NODE_ENV === 'development' ? 'cheap-module-source-map' : 'source-map',
+  devtool:
+    process.env.NODE_ENV === 'development'
+      ? 'cheap-module-source-map'
+      : 'source-map',
   module: {
     rules: [
       {
@@ -114,6 +119,6 @@ const config: WebpackConfiguration = {
     hot: true,
     port: 1337,
   },
-}
+};
 
-export default config
+export default config;

@@ -1,4 +1,9 @@
-import { MantineProvider, ColorSchemeProvider, ColorScheme, Global } from '@mantine/core';
+import {
+  MantineProvider,
+  ColorSchemeProvider,
+  ColorScheme,
+  Global,
+} from '@mantine/core';
 import { Home } from '@pages/Home';
 import { useState } from 'react';
 

@@ -33,12 +33,7 @@ export function Quote() {
 
   return (
     <Center mt={15}>
-      {!quote && (
-        <Loader
-          style={{ display: 'block' }}
-          variant='dots'
-        />
-      )}
+      {!quote && <Loader style={{ display: 'block' }} variant='dots' />}
       {quote && <Blockquote cite={quote.author}>{quote.text}</Blockquote>}
     </Center>
   );

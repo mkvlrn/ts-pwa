@@ -1,6 +1,6 @@
-import { pathsToModuleNameMapper } from 'ts-jest'
+import { pathsToModuleNameMapper } from 'ts-jest';
 
-import { compilerOptions } from './tsconfig.json'
+import { compilerOptions } from './tsconfig.json';
 
 export default {
   moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx', 'json'],
@@ -16,4 +16,4 @@ export default {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/src/',
   }),
-}
+};
