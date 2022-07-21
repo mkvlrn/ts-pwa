@@ -1,8 +1,14 @@
 {
-  "*.(js|ts|jsx|tsx)": [
+  "*.(ts|tsx)": [
     "eslint --fix",
     "prettier --write",
-    "npm test --bail --findRelatedTests"
+    "tsc --skipLibCheck --noEmit",
+    "yarn test --bail"
+  ],
+  "*.(js|jsx)": [
+    "eslint --fix",
+    "prettier --write",
+    "yarn test --bail"
   ],
   "*.json": [
     "prettier --write"
